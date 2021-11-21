@@ -10,3 +10,5 @@ SM is 64K words shared between C and Intercal
 8004 - SDL_SetRenderDrawColor(:85|:84, .1,.2,.3,.4)
 8005 - SDL_RendererClear(:85|:84)
 8006 - SDL_RendererPresent(:85|:84)
+8007 - SDL_RenderDrawLine(:85|:84,.1,.2,.3,.4)
+8008 - .1 <- SDL_PollEvent(&SM SUB .1)
