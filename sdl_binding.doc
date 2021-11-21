@@ -1,0 +1,12 @@
+SM is 64K words shared between C and Intercal
+
+7000 - DO SM SUB .1 <- .2 
+7010 - DO .1 <- SM SUB .1
+
+8000 - SDL_Init()
+8001 - :83|:82 <- SDL_CreateWindow(SM SUB .10, w=.3, h=.4, x=.1, y=.2, flags=:1)
+8002 - SDL_Delay(:1)
+8003 - :85|:84 <- SDL_CreateRenderer(:83|:82, .1,:1)
+8004 - SDL_SetRenderDrawColor(:85|:84, .1,.2,.3,.4)
+8005 - SDL_RendererClear(:85|:84)
+8006 - SDL_RendererPresent(:85|:84)

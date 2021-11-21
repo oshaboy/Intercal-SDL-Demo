@@ -1,0 +1,121 @@
+
+PLEASE NOTE You need to fill :83|:82 and :85|:84 with something because otherwise you get E200
+DO :82 <- #0
+DO :83 <- #0
+DO :84 <- #0
+DO :85 <- #0
+PLEASE (8000) NEXT
+
+PLEASE NOTE Set title to "title"
+DO .1 <- #0
+DO .2 <- #26996
+PLEASE (7000) NEXT
+DO .1 <- #1
+DO .2 <- #27764
+PLEASE (7000) NEXT
+DO .1 <- #2
+DO .2 <- #101
+PLEASE (7000) NEXT
+
+PLEASE NOTE Create Window
+DO .1 <- #1024
+DO .2 <- #512
+DO :1 <- #0
+DO .3 <- #0
+DO .4 <- #0
+DO .10 <- #0
+PLEASE (8001) NEXT
+
+PLEASE NOTE Create Renderer 
+DO .1 <- #65535
+DO :1 <- #1
+
+PLEASE NOTE Make Screen White
+PLEASE (8003) NEXT
+DO .1 <- #255
+DO .2 <- #255
+DO .3 <- #255
+DO .4 <- #255
+PLEASE (8004) NEXT
+PLEASE (8005) NEXT
+PLEASE (8006) NEXT
+
+PLEASE NOTE Main Loop
+DO COME FROM (10)
+PLEASE (11) NEXT
+(10) DO NOTHING
+DO GIVE UP
+
+(11)
+PLEASE NOTE Generate random color and make Draw Color
+DO (1900) NEXT
+DO .3 <- .1~#255
+DO (1900) NEXT
+DO .2 <- .1~#255
+DO (1900) NEXT
+DO .1 <- .1~#255
+PLEASE .4 <- #255
+PLEASE (8004) NEXT
+
+PLEASE NOTE Draw Random Line
+DO (1900) NEXT
+DO .4 <- .1~#511
+DO (1900) NEXT
+DO .3 <- .1~#1023
+DO (1900) NEXT
+DO .2 <- .1~#511
+DO (1900) NEXT
+DO .1 <- .1~#1023
+PLEASE (8007) NEXT
+
+PLEASE NOTE Poll Event 
+DO .1 <- #0
+PLEASE (8008) NEXT
+DO ABSTAIN .1 FROM COMING FROM
+
+PLEASE NOTE Check if Event is Quit
+(12) DO .1 <- #0
+PLEASE (7010) NEXT
+DO .3 <- .1~#65279
+PLEASE (17) NEXT
+DO ABSTAIN .3 FROM (13)
+DO .2 <- #0
+(13) DO .2 <- .1~#256
+DO REINSTATE (13)
+DO REINSTATE COMING FROM
+DO ABSTAIN .2 FROM COMING FROM
+(14) PLEASE NOTE Quit
+PLEASE GIVE UP
+
+DO COME FROM (14)
+DO COME FROM (12)
+PLEASE NOTE Draw Screen
+PLEASE (8006) NEXT
+PLEASE :1 <- #1
+PLEASE (8002) NEXT
+DO RESUME #1
+
+(17)
+	DO .3 <- .V3
+	DO .3 <- .V3
+	DO .3 <- .V3
+	
+	DO .3 <- .V3
+	DO .3 <- .V3
+	DO .3 <- .V3
+	
+	DO .3 <- .V3
+	DO .3 <- .V3
+	DO .3 <- .V3
+	
+	DO .3 <- .V3
+	DO .3 <- .V3
+	DO .3 <- .V3
+	
+	DO .3 <- .V3
+	DO .3 <- .V3
+	DO .3 <- .V3
+	DO .3 <- .3~#1
+	PLEASE RESUME #1
+
+
