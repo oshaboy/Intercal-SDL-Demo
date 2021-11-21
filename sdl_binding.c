@@ -1,5 +1,5 @@
 /*
-	These Bindings are just enough to run the Demo and not much else
+	These Bindings are just enough to run the Demo and not much else. Which is why I didn't include them with the hacked compiler. 
 */
 #include <ick_ec.h>
 #include <SDL2/SDL.h>
